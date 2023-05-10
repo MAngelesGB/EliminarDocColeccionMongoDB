@@ -39,14 +39,14 @@
     <div id="agregarUsuario">
         <a href="addUser">Agregar</a> <!-- ruta al formulario (endpoint) -->
     </div>
-    <!--Script Js para mostrar una alerta de confirmacion para eliminar-->
+    <!--Script Js para mostrar una alerta de confirmacion para eliminar un doc de la coleccion de mongodb-->
     <script type="text/javascript">
-        function confirmar()
+        function confirmar() 
         {
             let eliminar = confirm('¿Deseas eliminar este registro?'); // Mensaje que regresa valores booleanos
             if(eliminar) // true
                 return true; // regresa true
-            else // de lo contrario 
+            else // de lo contrario
                 return false; // regresa false
         }
     </script>
