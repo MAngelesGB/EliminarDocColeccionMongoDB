@@ -49,11 +49,11 @@ router.post('/updateUser', (req, res)=>{
         .catch((error)=>{res.json({message:error})}); // Si no es correcto: arroja un mensaje de error
 });
 
-//Endpoint con metodo GET para la -- ELIMINACION -- del documento de la coleccion
+//Endpoint con metodo GET para la -- ELIMINACION -- del documento de la coleccion de MongoDB 
 router.get('/deleteUser/:id',(req,res)=>{
-    User.findByIdAndDelete(req.params.id) // recoje el id por metodo por la URL. ---> Elimina documento de la coleccion
-    .then((data)=>{res.redirect('/usuarios')}) // en caso de que sea correcta redirecciona a la pagina del catalogo con la nueva lista
-    .catch((error)=>{res.json({message:error})}); //En caso de que sea incorrecta muestra un mensaje de error
+    User.findByIdAndDelete(req.params.id) // recoje el id por URL. ---> Elimina documento de la coleccion
+    .then((data)=>{res.redirect('/usuarios')}) // Ejecucion correcta: redirecciona a la pagina con el nuevo catalogo de usuarios
+    .catch((error)=>{res.json({message:error})}); //  Ejecucion incorrecta: muestra un mensaje de error
 });
 
 module.exports = router; //Se exporta el routeador

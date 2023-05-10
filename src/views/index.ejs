@@ -40,12 +40,12 @@
         <a href="addUser">Agregar</a> <!-- ruta al formulario (endpoint) -->
     </div>
     <!--Script Js para mostrar una alerta de confirmacion para eliminar-->
-    <script>
+    <script type="text/javascript">
         function confirmar()
         {
-            let eliminar = confirm('¿Deseas eliminar este registros?'); // Mensaje que regresa valores booleanos
-            if(eliminar) // true-false
-                return true; // en caso de que el mensaje sea true, regresa true
+            let eliminar = confirm('¿Deseas eliminar este registro?'); // Mensaje que regresa valores booleanos
+            if(eliminar) // true
+                return true; // regresa true
             else // de lo contrario 
                 return false; // regresa false
         }
